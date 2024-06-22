@@ -1,0 +1,7 @@
+1. User will receive a QR code that will redirect to the landing page
+2. Website is a single page only
+3. Website will have Englis and Polish language avaliable from the first view
+
+
+To Do
+1. create icons for page
