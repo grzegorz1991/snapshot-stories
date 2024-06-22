@@ -5,3 +5,25 @@
 
 To Do
 1. create icons for page
+
+2.Śledzenie łańcuszka na mapie
+
+
+
+Snapshot Stories: A Collaborative Photography Project
+
+Snapshot Stories is an innovative photography initiative that celebrates storytelling through a unique collaborative approach. The project revolves around the idea of capturing meaningful moments and narratives as participants pass a camera from person to person.
+
+Here's how it works: Each participant begins by receiving a camera from a friend. They are tasked with taking a photo that not only reflects something significant to them or their environment but also includes a picture featuring both the giver (previous participant) and the receiver (current participant) of the camera.
+
+After capturing their photo, participants generate a QR code that links to a brief message about themselves and acknowledges the person who passed them the camera. This QR code, along with the photo featuring the giver and receiver, is then attached to the camera.
+
+The camera is subsequently passed on to another participant, who continues the process by taking their own photo with the giver and receiver included, generating a new QR code message, and passing it along.
+
+This chain continues, creating a collection of photos intertwined with personal stories and connections as the camera travels from one person to the next. Snapshot Stories aims to showcase the diversity of human experiences and perspectives through photography and personal narratives.
+
+At the conclusion of the project, all photos are gathered and QR codes are scanned to reveal the interconnected journey of the camera. This collaborative effort highlights how a simple camera can become a powerful tool for fostering connections and sharing stories within communities and beyond.
+
+Join us in capturing moments, sharing stories, and celebrating the transformative power of photography to connect people from different walks of life.
+
+Feel free to adjust the text further to fit your specific project details and objectives. This version emphasizes the collaborative aspect of the project and integrates the concept of including both the giver and receiver in each photo.
