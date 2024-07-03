@@ -12,4 +12,9 @@ public class indexController {
 
         return "index";
     }
+
+    @GetMapping("/carousel")
+    public static String carouselPageView(){
+        return "carousel";
+    }
 }
