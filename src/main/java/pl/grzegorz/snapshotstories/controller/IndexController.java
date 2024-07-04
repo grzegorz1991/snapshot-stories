@@ -9,13 +9,11 @@ public class IndexController {
 
     @GetMapping("/")
     public static String indexPageView(){
-
         return "index";
     }
 
     @GetMapping("/success")
     public String showSuccessView() {
-
         return "success";
     }
 }
