@@ -5,16 +5,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class indexController {
+public class IndexController {
 
-    @GetMapping("/index")
+    @GetMapping("/")
     public static String indexPageView(){
 
         return "index";
     }
 
-    @GetMapping("/carousel")
-    public static String carouselPageView(){
-        return "carousel";
+    @GetMapping("/success")
+    public String showSuccessView() {
+
+        return "success";
     }
 }
