@@ -15,13 +15,12 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
           rel="stylesheet" type="text/css"/>
-
     <!-- SimpleLightbox plugin CSS-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet"/>
     <!-- Core theme CSS (includes Bootstrap)-->
     <link th:href="@{/css/styles.css}" rel="stylesheet"/>
-
 </head>
+
 <body id="page-top">
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
@@ -34,13 +33,12 @@
             <ul class="navbar-nav ms-auto my-2 my-lg-0">
                 <li class="nav-item"><a class="nav-link" href="#about">About the project</a></li>
                 <li class="nav-item"><a class="nav-link" href="#instructions">Instructions</a></li>
-                <!--                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>-->
-                <!--                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>-->
                 <li class="nav-item"><a class="nav-link" href="#contact">Contact Me</a></li>
             </ul>
         </div>
     </div>
 </nav>
+
 <!-- Masthead-->
 <header class="masthead">
     <div class="container px-4 px-lg-5 h-100">
@@ -59,6 +57,7 @@
         </div>
     </div>
 </header>
+
 <!-- About-->
 <section class="page-section bg-primary" id="about">
     <div class="container px-4 px-lg-5">
@@ -69,7 +68,6 @@
                 <p class="text-white-75 mb-4">
                     Snapshot Stories is a unique photography project that celebrates storytelling through a
                     collaborative approach.<br><br>
-
                     Here's how it works:<br>
                     1. Each participant receives a camera from a friend.<br>
                     2. They take a meaningful photo that includes both the giver (previous participant) and the receiver
@@ -77,26 +75,22 @@
                     3. Participants write a brief message about themselves and acknowledge the person who gave them the
                     camera.<br>
                     4. The camera is passed on to another person, who repeats the process.<br><br>
-
                     This ongoing chain creates a collection of photos and personal stories, showcasing the diversity of
                     human experiences. Snapshot Stories demonstrates how a simple camera can connect people and share
                     stories within communities and beyond. Join us in celebrating the power of photography to bring
                     people together.
                 </p>
-
-
                 <a class="btn btn-light btn-xl" href="#instructions">How to do it?</a>
             </div>
         </div>
     </div>
 </section>
 
-
 <!-- Instructions -->
 <section class="page-section" id="instructions">
     <div class="container px-4 px-lg-5">
         <!-- Carousel -->
-        <div id="instructionsCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+        <div id="instructionsCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
             <div class="carousel-inner">
                 <!-- Step 1: Scan QR -->
                 <div class="carousel-item active">
@@ -193,8 +187,6 @@
     </div>
 </section>
 
-
-
 <!-- Contact-->
 <section class="page-section" id="contact">
     <div class="container px-4 px-lg-5">
@@ -208,7 +200,6 @@
         </div>
         <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
             <div class="col-lg-6">
-
                 <form id="contactForm" action="/submitForm" method="post">
                     <!-- Name input-->
                     <div class="form-floating mb-3">
@@ -235,8 +226,8 @@
                     </div>
                     <!-- Message input-->
                     <div class="form-floating mb-3">
-        <textarea class="form-control" id="message" name="message" placeholder="Enter your message here..."
-                  style="height: 10rem" data-sb-validations="required"></textarea>
+                            <textarea class="form-control" id="message" name="message" placeholder="Enter your message here..."
+                                      style="height: 10rem" data-sb-validations="required"></textarea>
                         <label for="message">Message</label>
                         <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                     </div>
@@ -245,7 +236,6 @@
                         <button class="btn btn-primary btn-xl" type="submit">Submit</button>
                     </div>
                 </form>
-
             </div>
         </div>
         <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -256,26 +246,7 @@
         </div>
     </div>
 </section>
-<!--src/main/resources/static/assets/icons/test icons/1.jpeg-->
-<section>
-    <div class="carousel" id="myslider" data-ride="carousel">
 
-        <div class="carousel-inner">
-            <div class="item active">
-                <img src="/assets/icons/test icons/1.jpeg">
-            </div>
-            <div class="item">
-                <img src="/assets/icons/test icons/2.jpeg">
-            </div>
-            <div class="item">
-                <img src="/assets/icons/test icons/3.jpeg">
-            </div>
-        </div>
-
-    </div>
-
-
-</section>
 
 <!-- Footer-->
 <footer class="bg-light py-5">
@@ -287,9 +258,6 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-<!-- Bootstrap core JS-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- SimpleLightbox plugin JS-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
 <!-- Core theme JS-->
