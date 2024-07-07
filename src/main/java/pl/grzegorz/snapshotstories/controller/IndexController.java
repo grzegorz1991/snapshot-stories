@@ -17,6 +17,5 @@ public class IndexController {
         return "success";
     }
 
-    @GetMapping("/carousel")
-    public String getCarousel(){return "carousel";}
+
 }
