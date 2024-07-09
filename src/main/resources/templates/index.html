@@ -3,22 +3,8 @@
 <head th:include="fragments/header :: header"></head>
 
 <body id="page-top">
-<!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-    <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="#page-top">Snapshot Stories</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                <li class="nav-item"><a class="nav-link" href="#about">About the project</a></li>
-                <li class="nav-item"><a class="nav-link" href="#instructions">Instructions</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact Me</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<!-- Navigation Fragment-->
+<div th:include="fragments/nav :: nav"></div>
 
 <!-- Masthead-->
 <header class="masthead">
@@ -39,137 +25,14 @@
     </div>
 </header>
 
-<!-- About-->
-<section class="page-section bg-primary" id="about">
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h2 class="text-white mt-0">A Collaborative Photography Project</h2>
-                <hr class="divider divider-light"/>
-                <p class="text-white-75 mb-4">
-                    Snapshot Stories is a unique photography project that celebrates storytelling through a
-                    collaborative approach.<br><br>
-                    Here's how it works:<br>
-                    1. Each participant receives a camera from a friend.<br>
-                    2. They take a meaningful photo that includes both the giver (previous participant) and the receiver
-                    (current participant) of the camera.<br>
-                    3. Participants write a brief message about themselves and acknowledge the person who gave them the
-                    camera.<br>
-                    4. The camera is passed on to another person, who repeats the process.<br><br>
-                    This ongoing chain creates a collection of photos and personal stories, showcasing the diversity of
-                    human experiences. Snapshot Stories demonstrates how a simple camera can connect people and share
-                    stories within communities and beyond. Join us in celebrating the power of photography to bring
-                    people together.
-                </p>
-                <a class="btn btn-light btn-xl" href="#instructions">How to do it?</a>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- About Section -->
+<div th:include="fragments/about :: about"></div>
 
-<!-- Instructions -->
-<section class="page-section" id="instructions">
-    <div class="container px-4 px-lg-5">
-        <!-- Carousel -->
-        <div id="instructionsCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
-            <div class="carousel-inner">
-                <!-- Step 1: Scan QR -->
-                <div class="carousel-item active">
-                    <div class="row gx-4 gx-lg-5 justify-content-center align-items-center">
-                        <div class="col-lg-6 text-center">
-                            <div class="mb-4">
-                                <h2 class="text-black mt-0">Step 1: Scan QR Code</h2>
-                                <hr class="divider divider-light"/>
-                                <p class="text-black-75 mb-4">
-                                    Scan the QR code provided with your smartphone camera or QR code scanning app.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 text-center">
-                            <img src="/assets/img/instructions/step1.jpeg" alt="Step 1 Image" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 2: Take a picture together -->
-                <div class="carousel-item">
-                    <div class="row gx-4 gx-lg-5 justify-content-center mt-5 align-items-center">
-                        <div class="col-lg-6 order-lg-2 text-center">
-                            <div class="mb-4">
-                                <h2 class="text-black mt-0">Step 2: Take a Picture Together</h2>
-                                <hr class="divider divider-light"/>
-                                <p class="text-black-75 mb-4">
-                                    Take a photograph together with the camera provided. Ensure both of you are in the frame.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 order-lg-1 text-center">
-                            <img src="/assets/img/instructions/step2.jpeg" alt="Step 2 Image" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 3: Enter your information -->
-                <div class="carousel-item">
-                    <div class="row gx-4 gx-lg-5 justify-content-center mt-5 align-items-center">
-                        <div class="col-lg-6 text-center">
-                            <div class="mb-4">
-                                <h2 class="text-black mt-0">Step 3: Enter Your Information</h2>
-                                <hr class="divider divider-light"/>
-                                <p class="text-black-75 mb-4">
-                                    Using the provided form or link, enter your details such as your name, a brief description, and
-                                    the name of the person who gave you the camera.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 text-center">
-                            <img src="/assets/img/instructions/step3.jpeg" alt="Step 3 Image" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 4: Give the camera to your friend -->
-                <div class="carousel-item">
-                    <div class="row gx-4 gx-lg-5 justify-content-center mt-5 align-items-center">
-                        <div class="col-lg-6 order-lg-2 text-center">
-                            <div class="mb-4">
-                                <h2 class="text-black mt-0">Step 4: Pass the Camera</h2>
-                                <hr class="divider divider-light"/>
-                                <p class="text-black-75 mb-4">
-                                    Once you have completed your entry, pass the camera along to a friend or acquaintance, ensuring
-                                    they follow the same steps.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 order-lg-1 text-center">
-                            <img src="/assets/img/instructions/step4.jpeg" alt="Step 4 Image" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Controls -->
-            <a class="carousel-control-prev" href="#instructionsCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#instructionsCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-
-        <!-- Contact button -->
-        <div class="row justify-content-center mt-5">
-            <div class="col-lg-8 text-center">
-                <a class="btn btn-primary btn-xl" href="#contact">Contact Us</a>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- Instructions Section -->
+<div th:include="fragments/instructions :: instructions"></div>
 
 <!-- Contact-->
-<section class="page-section" id="contact">
+<section class="page-section" id="contact"> <!-- Contact Section -->
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-lg-8 col-xl-6 text-center">
@@ -226,26 +89,11 @@
             </div>
         </div>
     </div>
-</section>
-
-
+</section> <!-- Contact Section -->
 
 
 <!-- Footer-->
-<footer class="bg-light py-5">
-    <div class="container px-4 px-lg-5">
-        <div class="small text-center text-muted">Copyright &copy; 2023 - Company Name</div>
-    </div>
-</footer>
-<!-- Bootstrap JS, Popper.js, and jQuery  for carousel-->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<!-- SimpleLightbox plugin JS-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-<!-- Core theme JS-->
-<script th:src="@{/js/scripts.js}"></script>
-<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+<div th:include="fragments/footer :: footer"></div>
 <script>
     // Function to show SweetAlert on form submission success
     function showSuccessAlert() {
