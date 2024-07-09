@@ -6,24 +6,8 @@
 <!-- Navigation Fragment-->
 <div th:include="fragments/nav :: nav"></div>
 
-<!-- Masthead-->
-<header class="masthead">
-    <div class="container px-4 px-lg-5 h-100">
-        <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-8 align-self-end">
-                <h1 class="text-white font-weight-bold">A Collaborative Photography Project</h1>
-                <hr class="divider"/>
-            </div>
-            <div class="col-lg-8 align-self-baseline">
-                <p class="text-white-75 mb-5">
-                    Snapshot Stories is a unique photography project that celebrates storytelling through the lens of a
-                    camera. It revolves around the idea of capturing moments and narratives as a camera is passed from
-                    person to person.</p>
-                <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
-            </div>
-        </div>
-    </div>
-</header>
+<!-- Masthead -->
+<div th:include="fragments/masthead :: masthead"></div>
 
 <!-- About Section -->
 <div th:include="fragments/about :: about"></div>
@@ -31,69 +15,16 @@
 <!-- Instructions Section -->
 <div th:include="fragments/instructions :: instructions"></div>
 
-<!-- Contact-->
-<section class="page-section" id="contact"> <!-- Contact Section -->
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-lg-8 col-xl-6 text-center">
-                <h2 class="mt-0">Let's Get In Touch!</h2>
-                <hr class="divider"/>
-                <p class="text-muted mb-5"> Send us a messages and we will get
-                    back to you as soon as possible!</p>
-            </div>
-        </div>
-        <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-            <div class="col-lg-6">
-                <form id="contactForm" action="/submitForm" method="post">
-                    <!-- Name input-->
-                    <div class="form-floating mb-3">
-                        <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..."
-                               data-sb-validations="required"/>
-                        <label for="name">Full name</label>
-                        <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                    </div>
-                    <!-- Email address input-->
-                    <div class="form-floating mb-3">
-                        <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com"
-                               data-sb-validations="required,email"/>
-                        <label for="email">Email address</label>
-                        <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                        <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                    </div>
-                    <!-- Phone number input-->
-                    <div class="form-floating mb-3">
-                        <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890"
-                               data-sb-validations="required"/>
-                        <label for="phone">Phone number</label>
-                        <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
-                        </div>
-                    </div>
-                    <!-- Message input-->
-                    <div class="form-floating mb-3">
-                            <textarea class="form-control" id="message" name="message" placeholder="Enter your message here..."
-                                      style="height: 10rem" data-sb-validations="required"></textarea>
-                        <label for="message">Message</label>
-                        <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                    </div>
-                    <!-- Submit Button-->
-                    <div class="d-grid">
-                        <button class="btn btn-primary btn-xl" type="submit">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                <i class="bi-phone fs-2 mb-3 text-muted"></i>
-                <div>+1 (555) 123-4567</div>
-            </div>
-        </div>
-    </div>
-</section> <!-- Contact Section -->
-
+<!-- Contact Section -->
+<div th:include="fragments/contact :: contact"></div>
 
 <!-- Footer-->
 <div th:include="fragments/footer :: footer"></div>
+
+<!-- Include External JavaScript File -->
+<script src="static/js/formHandler.js"></script>
+
+
 <script>
     // Function to show SweetAlert on form submission success
     function showSuccessAlert() {
