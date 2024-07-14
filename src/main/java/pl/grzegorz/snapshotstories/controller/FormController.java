@@ -19,7 +19,6 @@ public class FormController {
     @PostMapping
     public ResponseEntity<String> submitForm(@RequestParam String name,
                                              @RequestParam String email,
-
                                              @RequestParam String message) {
 
         FormData formData = new FormData();
