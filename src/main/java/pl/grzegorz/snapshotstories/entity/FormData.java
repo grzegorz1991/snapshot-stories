@@ -16,7 +16,7 @@ public class FormData {
     private Long id;
     private String name;
     private String email;
-    private String phone;
+
     @Lob
     private String message;
 }

@@ -19,13 +19,13 @@ public class FormController {
     @PostMapping
     public ResponseEntity<String> submitForm(@RequestParam String name,
                                              @RequestParam String email,
-                                             @RequestParam String phone,
+
                                              @RequestParam String message) {
 
         FormData formData = new FormData();
         formData.setName(name);
         formData.setEmail(email);
-        formData.setPhone(phone);
+
         formData.setMessage(message);
 
         formService.saveFormData(formData);
