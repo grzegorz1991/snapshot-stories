@@ -11,24 +11,37 @@
             <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                 <div class="col-lg-6">
                     <form id="contactForm" action="/submitForm" method="post">
-                        <!-- Name input-->
+                        <!-- Name or Nickname input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." data-sb-validations="required"/>
-                            <label for="name">Full name</label>
-                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name or nickname..." data-sb-validations="required"/>
+                            <label for="name">Your Name or Nickname</label>
+                            <div class="invalid-feedback" data-sb-feedback="name:required">A name or nickname is required.</div>
+                        </div>
+                        <!-- Instagram handle input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="instagram" name="instagram" type="text" placeholder="Enter your Instagram handle..." data-sb-validations="required"/>
+                            <label for="instagram">Your Instagram</label>
+                            <div class="invalid-feedback" data-sb-feedback="instagram:required">An Instagram handle is required.</div>
                         </div>
                         <!-- Email address input-->
                         <div class="form-floating mb-3">
                             <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" data-sb-validations="required,email"/>
-                            <label for="email">Email address</label>
+                            <label for="email">Email Address</label>
                             <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                             <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            <p class="text-muted">We assure you that we will not spam or send any automated messages. Only human interaction.</p>
                         </div>
-                        <!-- Message input-->
+                        <!-- TEXT1 input-->
                         <div class="form-floating mb-3">
-                            <textarea class="form-control" id="message" name="message" type="text" placeholder="Enter your message here..." data-sb-validations="required"></textarea>
-                            <label for="message">Message</label>
-                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            <input class="form-control" id="text1" name="text1" type="text" placeholder="Enter text for TEXT1..." data-sb-validations="required"/>
+                            <label for="text1">TEXT1</label>
+                            <div class="invalid-feedback" data-sb-feedback="text1:required">TEXT1 is required.</div>
+                        </div>
+                        <!-- TEXT2 input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="text2" name="text2" type="text" placeholder="Enter text for TEXT2..." data-sb-validations="required"/>
+                            <label for="text2">TEXT2</label>
+                            <div class="invalid-feedback" data-sb-feedback="text2:required">TEXT2 is required.</div>
                         </div>
                         <!-- Submit Button-->
                         <div class="d-grid">
