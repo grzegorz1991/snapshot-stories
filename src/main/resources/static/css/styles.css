@@ -11064,3 +11064,32 @@ header.contactMasthead h1, header.contactMasthead .h1 {
     font-size: 3.5rem;
   }
 }
+
+.textarea{
+  resize:none;
+  height:200px;
+  transition:all 0.5s;
+  border:2px solid #DDDDDD;
+  width:100% !important;
+}
+
+.textarea_danger{
+  border:2px solid red !important;
+}
+
+.textarea:focus{
+  box-shadow:none;
+  outline:none;
+  border:2px solid blue;
+}
+
+textarea {
+  resize: none;
+}
+
+#count_message {
+  background-color: smoke;
+  margin-top: -20px;
+  margin-right: 5px;
+}
+

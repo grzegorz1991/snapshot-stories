@@ -15,8 +15,13 @@ public class FormData {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    private String instagram;
     private String email;
-
     @Lob
-    private String message;
+    private String text1;
+    @Lob
+    private String text2;
+
+//    @Lob
+//    private String message;
 }

@@ -18,17 +18,20 @@ public class FormController {
 
     @PostMapping
     public ResponseEntity<String> submitForm(@RequestParam String name,
+                                             @RequestParam String instagram,
                                              @RequestParam String email,
-                                             @RequestParam String message) {
+                                             @RequestParam String text1,
+                                             @RequestParam String text2) {
 
         FormData formData = new FormData();
         formData.setName(name);
+        formData.setInstagram(instagram);
         formData.setEmail(email);
+        formData.setText1(text1);
+        formData.setText2(text2);
 
-        formData.setMessage(message);
 
         formService.saveFormData(formData);
-
 
         return ResponseEntity.ok("Form submitted successfully");
     }
