@@ -39,14 +39,21 @@ $(document).ready(function () {
             return;
         }
 
-        // Serialize form data
-        var formData = $(this).serialize();
+        // Construct JSON object from form data
+        var formData = {
+            name: $('#name').val(),
+            instagram: $('#instagram').val(),
+            email: $('#email').val(),
+            text1: $('#text1').val(),
+            text2: $('#text2').val()
+        };
 
-        // Send AJAX request to submit form data
+        // Send AJAX request to submit form data as JSON
         $.ajax({
             url: '/submitForm',
             type: 'POST',
-            data: formData,
+            contentType: 'application/json',
+            data: JSON.stringify(formData),
             success: function (response) {
                 // On success, show success alert
                 showSuccessAlert();

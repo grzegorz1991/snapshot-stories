@@ -22,6 +22,10 @@ public class FormData {
     @Lob
     private String text2;
 
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_info_id")
+    private UserInfo userInfo;
 //    @Lob
 //    private String message;
 }
