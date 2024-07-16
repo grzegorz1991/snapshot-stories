@@ -5,95 +5,49 @@
                 <div class="col-lg-8 col-xl-6 text-center">
                     <h2 class="mt-0">Let's Get In Touch!</h2>
                     <hr class="divider"/>
-                    <p class="text-muted mb-5">Send us a message and we will get back to you as soon as possible!</p>
+                    <p class="text-muted mb-5">Person that gave you this camera have already filled this form (hopefully!) so now it is your turn to fill it before paying it forward! Please fill this form before passing the camera to the next person.</p>
                 </div>
             </div>
             <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                 <div class="col-lg-6">
                     <form id="contactForm" action="/submitForm" method="post">
                         <!-- Name or Nickname input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="name" name="name" type="text"
-                                   placeholder="Enter your name or nickname..." data-sb-validations="required"/>
-                            <label for="name">Your Name or Nickname</label>
-                            <div class="invalid-feedback" data-sb-feedback="name:required">A name or nickname is
-                                required.
-                            </div>
-                            <p>Please enter your full name or the nickname you are commonly known by. If people know you
-                                more by a nickname, feel free to use that.</p>
+                        <div class="mb-3">
+<!--                            <label for="name" class="form-label">Your Name or Nickname</label>-->
+                            <p class="text-muted">Please enter your full name or the nickname you are commonly known by. If people know you more by a nickname, feel free to use that.</p>
+                            <input class="form-control" id="name" name="name" type="text" placeholder="Your Name or Nickname" data-sb-validations="required"/>
+                            <div class="invalid-feedback" data-sb-feedback="name:required">A name or nickname is required.</div>
                         </div>
                         <!-- Instagram handle input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="instagram" name="instagram" type="text"
-                                   placeholder="Enter your Instagram handle..." data-sb-validations="required"/>
-                            <label for="instagram">Your Instagram</label>
-                            <div class="invalid-feedback" data-sb-feedback="instagram:required">An Instagram handle is
-                                required.
-                            </div>
-                            <p>Enter your Instagram account name. This will help us connect with you on social media and
-                                see your shared stories.</p>
+                        <div class="mb-3">
+<!--                            <label for="instagram" class="form-label">Your Instagram</label>-->
+                            <p class="text-muted">Enter your Instagram account name. This will help us connect with you on social media and see your shared stories.</p>
+                            <input class="form-control" id="instagram" name="instagram" type="text" placeholder="Your Instagram handle..." data-sb-validations="required"/>
+                            <div class="invalid-feedback" data-sb-feedback="instagram:required">An Instagram handle is required.</div>
                         </div>
                         <!-- Email address input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="email" name="email" type="email"
-                                   placeholder="name@example.com" data-sb-validations="required,email"/>
-                            <label for="email">Email Address</label>
+                        <div class="mb-3">
+<!--                            <label for="email" class="form-label">Email Address</label>-->
+                            <p class="text-muted">We assure you that this is only for us to get back to you. No other emails will be sent, and we will not use any form of automated responses or bots.</p>
+                            <input class="form-control" id="email" name="email" type="email" placeholder="Email Address" data-sb-validations="required,email"/>
                             <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                             <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            <p>We assure you that this is only for us to get back to you. No other emails will be sent,
-                                and we will not use any form of automated responses or bots.</p>
                         </div>
                         <!-- TEXT1 input-->
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" id="text1" name="text1" type="text"
-                                      placeholder="Enter text for TEXT1..." data-sb-validations="required"
-                                      oninput="updateCharacterCount(this, 'text1-count', 160)"></textarea>
-                            <label for="text1">TEXT1</label>
-                            <div class="invalid-feedback" data-sb-feedback="text1:required">TEXT1 is required.</div>
-                            <p id="text1-count">0/160 characters</p>
-                            <p>Please describe in at least 160 characters the person who gave you the camera. Share a
-                                little about how you received it and any interesting details you want to include.</p>
+                        <div class="mb-3">
+<!--                            <label for="text1" class="form-label">Who gave you this camera?</label>-->
+                            <p class="text-muted">Please describe in at least 160 and less than 200 characters the person who gave you the camera. Share a little about how you received it and any interesting details you want to include.</p>
+                            <textarea class="form-control" id="text1" name="text1" placeholder="Who gave you this camera?" data-sb-validations="required" oninput="updateCharacterCount(this, 'text1-count', 160)"></textarea>
+                            <div class="invalid-feedback" data-sb-feedback="text1:required">Please enter information here.</div>
+                            <span class="pull-right label label-default" id="count_text1"></span>
                         </div>
                         <!-- TEXT2 input-->
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" id="text2" name="text2" type="text"
-                                      placeholder="Enter text for TEXT2..." data-sb-validations="required"
-                                      oninput="updateCharacterCount(this, 'text2-count', 160)"></textarea>
-                            <label for="text2">TEXT2</label>
-                            <div class="invalid-feedback" data-sb-feedback="text2:required">TEXT2 is required.</div>
-                            <p id="text2-count">0/160 characters</p>
-                            <p>Write at least 160 characters about the person you plan to give the camera to next. Tell
-                                us who they are and why you chose them to continue the project.</p>
-                        </div>
-                        <!-- Message input-->
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" id="message" name="message" type="text"
-                                      placeholder="Enter your message here..."
-                                      data-sb-validations="required"></textarea>
-                            <label for="message">Message</label>
-                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
-                            </div>
-                        </div>
-
-                        <div class="form-floating mb-3">
-                            <form accept-charset="UTF-8" action="" method="POST">
-                            <textarea class="form-control" id="text" name="text"
-                                      maxlength="200" placeholder="Type in your message" rows="5"></textarea>
-                                <span class="pull-right label label-default" id="count_message"></span>
-                                <br>
-                                <button class="btn btn-info" type="submit">Post New Message</button>
-                            </form>
-                        </div>
-
-                        <div class="container mt-5">
-                            <div class="row">
-                                <div class="col-md-12 d-flex justify-content-center">
-                                    <textarea id="summary" onkeyup="validate()" class="form-control textarea" placeholder="Type Here..."></textarea>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-end">
-                                <span id="words_count" class="d-none">Words count - <span id="textcount"></span></span>
-                            </div>
+                        <div class="mb-3">
+<!--                            <label for="text2" class="form-label">Who are you going to give that camera to?</label>-->
+                            <p class="text-muted">Write at least 160 characters about the person you plan to give the camera to next. Tell us who they are and why you chose them to continue the project.</p>
+                            <textarea class="form-control" id="text2" name="text2" placeholder="Who are you going to give that camera to?" data-sb-validations="required" oninput="updateCharacterCount(this, 'text2-count', 160)"></textarea>
+                            <div class="invalid-feedback" data-sb-feedback="text2:required">Please enter information here.</div>
+                            <span class="pull-right label label-default" id="count_text2"></span>
                         </div>
 
                         <!-- Submit Button-->
@@ -105,6 +59,4 @@
             </div>
         </div>
     </section>
-
 </div>
-

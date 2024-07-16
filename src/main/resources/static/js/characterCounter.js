@@ -1,12 +1,36 @@
-var text_max = 201;
+
+//Implementation of Character Counter for Message
+
+var text_max = 200;
 $('#count_message').html('0 / ' + text_max);
 
-$('#text').keyup(function () {
-    var text_length = $('#text').val().length;
+$('#text1').keyup(function () {
+    var text_length = $('#text1').val().length;
     var text_remaining = text_max - text_length;
 
-    $('#count_message').html(text_length + ' / ' + text_max);
+    $('#count_text1').html(text_length + ' / ' + text_max);
 });
+
+
+//Implementation of Character Counter for Message
+
+var text_max = 200;
+$('#count_message').html('0 / ' + text_max);
+
+$('#text2').keyup(function () {
+    var text_length = $('#text2').val().length;
+    var text_remaining = text_max - text_length;
+
+    $('#count_text2').html(text_length + ' / ' + text_max);
+});
+
+
+
+
+
+
+
+
 
 function validate(){
     const areatextarea = document.querySelector("#summary");

@@ -23,13 +23,16 @@ public class FormController {
                                              @RequestParam String text1,
                                              @RequestParam String text2) {
 
+        if (name.isEmpty() || instagram.isEmpty() || email.isEmpty() || text1.isEmpty() || text2.isEmpty()) {
+            return ResponseEntity.badRequest().body("All fields are required");
+        }
+
         FormData formData = new FormData();
         formData.setName(name);
         formData.setInstagram(instagram);
         formData.setEmail(email);
         formData.setText1(text1);
         formData.setText2(text2);
-
 
         formService.saveFormData(formData);
 
