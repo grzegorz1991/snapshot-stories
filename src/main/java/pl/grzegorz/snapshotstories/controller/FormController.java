@@ -1,58 +1,43 @@
 package pl.grzegorz.snapshotstories.controller;
 
-import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import javax.validation.Valid;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import pl.grzegorz.snapshotstories.dto.FormDataDTO;
 import pl.grzegorz.snapshotstories.entity.UserInfo;
 import pl.grzegorz.snapshotstories.service.FormService;
 import pl.grzegorz.snapshotstories.service.UserInfoService;
 
 @Controller
-@RequestMapping("/submitForm")
+@SessionAttributes("number")
 public class FormController {
 
     @Autowired
-    private FormService formService;
-    @Autowired
     private UserInfoService userInfoService;
-//    @PostMapping
-//    public ResponseEntity<String> submitForm(
-//            @Valid @RequestBody FormDataDTO formDataDTO,
-//            HttpServletRequest request) {
-//
-//        try {
-//            // Retrieve user information
-//            UserInfo userInfo = new UserInfo();
-//            userInfo.setIpAddress(userInfoService.getClientIp(request));
-//            userInfo.setUserAgent(userInfoService.getUserAgent(request));
-//            userInfo.setOs(userInfoService.getOS(userInfo.getUserAgent()));
-//            userInfo.setBrowser(userInfoService.getBrowser(userInfo.getUserAgent()));
-//
-//            // Save user information
-//            userInfoService.saveUserInfo(userInfo);
-//
-//            // Save form data along with user information
-//            formService.saveFormData(formDataDTO, userInfo);
-//
-//            return ResponseEntity.ok("Form submitted successfully");
-//        } catch (Exception e) {
-//            return ResponseEntity.status(500).body("An error occurred while processing your request: " + e.getMessage());
-//        }
-//
-//    }
 
-    @PostMapping()
+    @Autowired
+    private FormService formService;
+
+    @PostMapping("/submitForm")
     public ResponseEntity<String> submitForm(
-            @Valid @RequestBody FormDataDTO formDataDTO,
-            HttpServletRequest request) {
+            @Validated @RequestBody FormDataDTO formDataDTO,
+            HttpServletRequest request,
+            Model model) {
+
+        HttpSession session = request.getSession();
+        Integer number = (Integer) session.getAttribute("number");
+
+        if (number == null) {
+            return ResponseEntity.status(400).body("Number is not set in the session");
+        }
 
         try {
             // Retrieve user information
@@ -85,12 +70,11 @@ public class FormController {
             userInfoService.saveUserInfo(userInfo);
 
             // Save form data along with user information
-            formService.saveFormData(formDataDTO, userInfo);
+            formService.saveFormData(formDataDTO, userInfo, number);
 
-            return ResponseEntity.ok("Form submitted successfully1");
+            return ResponseEntity.ok("Form submitted successfully");
         } catch (Exception e) {
             return ResponseEntity.status(500).body("An error occurred while processing your request: " + e.getMessage());
         }
     }
-
 }

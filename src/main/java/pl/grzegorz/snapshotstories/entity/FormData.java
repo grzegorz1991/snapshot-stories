@@ -22,6 +22,7 @@ public class FormData {
     @Lob
     private String text2;
 
+    private int cameraId;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_info_id")

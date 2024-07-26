@@ -29,6 +29,11 @@
                                         Scan the QR code provided with your smartphone camera or QR code scanning app.
                                     </p>
                                 </div>
+                                <!-- Button to Open the Modal -->
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#qrCodeModal">
+                                    QR Code?
+                                </button>
                             </div>
                             <div class="col-lg-6 text-center">
                                 <img src="/assets/img/instructions/step1.jpeg" alt="Step 1 Image" class="img-fluid">
@@ -47,6 +52,12 @@
                                         Take a photograph together with the camera provided. Ensure both of you are in
                                         the frame.
                                     </p>
+
+                                    <!-- Button to Open the Modal -->
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#instructionsModal">
+                                        How to Use a Disposable Camera
+                                    </button>
                                 </div>
                             </div>
                             <div class="col-lg-6 order-lg-1 text-center">
@@ -111,10 +122,86 @@
 
 
     </section>
-    <!-- Centered button -->
-    <div class="text-center mt-4">
+    <!-- Fill the form button -->
+    <div class="container text-center mt-5">
+        <p class="text-black-75 mb-4">All done? Nothing left to do but to go and...</p>
         <a class="btn btn-primary btn-xl" href="/contact">Fill the form</a>
     </div>
+    <!-- The Camera Modal -->
+    <div class="modal fade" id="instructionsModal" tabindex="-1" aria-labelledby="instructionsModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title" id="instructionsModalLabel">How to Use a Disposable Camera</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <p><strong>1. Advance the Film</strong></p>
+                    <p>Turn the film advance wheel until it stops to prepare the camera for the next shot. This ensures
+                        the film is in the correct position.</p>
+
+                    <p><strong>2. Steady Your Hand and Watch Your Fingers</strong></p>
+                    <p>Hold the camera steady with both hands. Use the viewfinder window to frame your shot, not the
+                        lens window. Keep fingers away from both the lens and flash.</p>
+
+                    <p><strong>3. Consider the Light and Use the Flash</strong></p>
+                    <p>Use the flash in low light or indoors. Slide the flash switch or press the button to activate it
+                        before shooting. Good lighting improves photo quality.</p>
+
+                    <p><strong>4. Get Closer to Your Subject</strong></p>
+                    <p>Stand 5-10 feet from your subject for clear photos. There is no zoom function, so move closer
+                        physically. You are the zoom!</p>
+
+                    <p><strong>5. Make Every Shot Count</strong></p>
+                    <p>You have a limited number of exposures, so think before you shoot to capture the best moments.
+                        Plan your shots to avoid wasting film.</p>
+
+                    <p><strong>6. Protect Your Camera</strong></p>
+                    <p>Keep the camera dry and free from dust. Store it in a safe place to avoid damage until all shots
+                        are taken. Treat it with care to ensure good photo quality.</p>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- The QR Modal -->
+    <div class="modal fade" id="qrCodeModal" tabindex="-1" aria-labelledby="qrCodeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="qrCodeModalLabel">About the QR Code</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <p>We printed a QR code on each camera for your ease of use and to help us track which camera you
+                        are using. It is simple to use because all you need to do is point your smartphone at it, and it
+                        will link you to our page. But since you are already here, you must know this already.</p>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <style>
         .custom-carousel-control {
             position: absolute;

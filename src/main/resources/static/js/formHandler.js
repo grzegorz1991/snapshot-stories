@@ -13,6 +13,16 @@ function showSuccessAlert() {
     });
 }
 
+// Function to show SweetAlert on form submission failure
+function showErrorAlert(message) {
+    Swal.fire({
+        title: 'Error!',
+        text: message,
+        icon: 'error',
+        confirmButtonText: 'OK'
+    });
+}
+
 // Handle form submission
 $(document).ready(function () {
     $('#contactForm').submit(function (event) {
@@ -63,12 +73,8 @@ $(document).ready(function () {
             error: function (error) {
                 // Handle error scenarios
                 console.error('Error:', error);
-                Swal.fire({
-                    title: 'Error!',
-                    text: 'There was an error submitting the form.',
-                    icon: 'error',
-                    confirmButtonText: 'OK'
-                });
+                var errorMessage = error.responseJSON ? error.responseJSON.message : 'There was an error submitting the form.';
+                showErrorAlert(errorMessage);
             }
         });
     });

@@ -33,7 +33,7 @@ public class FormServiceImpl implements FormService {
 //    }
 
     @Override
-    public void saveFormData(FormDataDTO formDataDTO, UserInfo userInfo) {
+    public void saveFormData(FormDataDTO formDataDTO, UserInfo userInfo, int cameraID) {
         FormData formData = new FormData();
         formData.setName(formDataDTO.getName());
         formData.setInstagram(formDataDTO.getInstagram());
@@ -42,6 +42,8 @@ public class FormServiceImpl implements FormService {
         formData.setText2(formDataDTO.getText2());
 
         formData.setUserInfo(userInfo);
+
+        formData.setCameraId(cameraID);
 
         formDataRepository.save(formData);
     }
